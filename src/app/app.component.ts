@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendIntegratorService } from './services/backend-integrator.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'invillia-frontend';
+  items = [];
+
+  constructor(integrator: BackendIntegratorService) {}
 }

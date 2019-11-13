@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiService } from '../services/swapi.service';
 
 @Component({
   selector: 'app-character-list',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterListComponent implements OnInit {
 
-  constructor() { }
+  items = ['oi', 'oi'];
+
+  constructor(swapiService: SwapiService) { }
 
   ngOnInit() {
   }
