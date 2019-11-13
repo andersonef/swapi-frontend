@@ -1,0 +1,19 @@
+.input {
+    width: 98%;
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 15px;
+}
+.input input {
+    border: none;
+    width: 98%;
+    color: #939393;
+    line-height: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: transparent;
+}
+.input input:focus {
+    border: none;
+    outline: none;
+}
