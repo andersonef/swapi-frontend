@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SwapiService } from '../services/swapi.service';
+import { CharacterListService } from '../services/character-list.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-character-list',
@@ -8,11 +9,23 @@ import { SwapiService } from '../services/swapi.service';
 })
 export class CharacterListComponent implements OnInit {
 
-  items = ['oi', 'oi'];
+  constructor(
+    public service: CharacterListService,
+    public activatedRoute: ActivatedRoute
+  ) { }
 
-  constructor(swapiService: SwapiService) { }
+  async ngOnInit() {
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (params.search) {
+        return this.service.search(params.search);
+      }
+      this.service.index(params.page || 1);
+    });
+  }
 
-  ngOnInit() {
+  getId(char: any) {
+    const parts = char.url.split('/');
+    return parts[parts.length-2];
   }
 
 }

@@ -1,29 +1,30 @@
-<div class="card" *ngFor="let char of items">
-    <h1>LUKE SKYWALKER</h1>
-    <div class="info">
-        <h3>HEIGHT</h3>
-        <span>172</span>
-    </div>
+<div class="list">
+    <div class="card" *ngFor="let char of service.characterList">
+        <h1>{{ char.name }}</h1>
+        <div class="info">
+            <h3>HEIGHT</h3>
+            <span>{{ char.height }}</span>
+        </div>
 
-    <div class="button">
-        <button>
-            <span>Details</span>
-        </button>
-    </div>
+        <div class="info">
+            <h3>MASS</h3>
+            <span>{{ char.mass }}</span>
+        </div>
 
-    <div class="info">
-        <h3>HEIGHT</h3>
-        <span>172</span>
-    </div>
+        <div class="info">
+            <h3>HAIR COLOR</h3>
+            <span>{{ char.hair_color }}</span>
+        </div>
 
-    <div class="info">
-        <h3>HEIGHT</h3>
-        <span>172</span>
-    </div>
+        <div class="info">
+            <h3>SKIN COLOR</h3>
+            <span>{{ char.skin_color }}</span>
+        </div>
 
-    <div class="info">
-        <h3>HEIGHT</h3>
-        <span>172</span>
+        <div class="button">
+            <a [routerLink]="'/details/' + getId(char)">
+                <span>Details</span>
+            </a>
+        </div>  
     </div>
-        
 </div>

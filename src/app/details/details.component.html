@@ -1,0 +1,61 @@
+<div class="card">
+    <h3 class="pointer" (click)="back()">&lt; Back</h3>
+    <h1>{{ service.char.name }}</h1>
+    <div class="info">
+        <h3>HEIGHT</h3>
+        <span>{{ service.char.height }}</span>
+    </div>
+
+    <div class="info">
+        <h3>MASS</h3>
+        <span>{{ service.char.mass }}</span>
+    </div>
+
+    <div class="info">
+        <h3>HAIR COLOR</h3>
+        <span>{{ service.char.hair_color }}</span>
+    </div>
+
+    <div class="info">
+        <h3>SKIN COLOR</h3>
+        <span>{{ service.char.skin_color }}</span>
+    </div>
+    <hr>
+    <h1>Homeworld: {{ service.planet.name }}</h1>
+
+    <div class="info">
+        <h3>Rotation Period</h3>
+        <span>{{ service.planet.rotation_period }}</span>
+    </div>
+
+    <div class="info">
+        <h3>Orbital Period</h3>
+        <span>{{ service.planet.orbital_period }}</span>
+    </div>
+
+    <div class="info">
+        <h3>Climate</h3>
+        <span>{{ service.planet.climate }}</span>
+    </div>
+
+    <div class="info">
+        <h3>Terrain</h3>
+        <span>{{ service.planet.terrain }}</span>
+    </div>
+
+    <div class="info">
+        <h3>Population</h3>
+        <span>{{ service.planet.population }}</span>
+    </div>
+
+    <hr>
+
+    <h1>Starships</h1>
+
+    <div class="info" *ngFor="let id of service.shipsIds">
+        <app-starship [id]="id"></app-starship>
+    </div>
+    
+    
+    
+</div>

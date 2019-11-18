@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-field',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFieldComponent implements OnInit {
 
-  constructor() { }
+  public searchString = '';
+
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  search(keyEvent) {
+    if (keyEvent.key !== 'Enter') {
+      return;
+    }
+    const queryParams: any = {};
+    if (this.searchString) {
+      queryParams.search = this.searchString;
+    }
+    this.router.navigate(['/'], {
+      queryParams
+    });
+  }
 }

@@ -21,7 +21,7 @@ h1,h2,h3 {
     font-size: 24px;
 }
 h1 {
-    grid-column: 1/3;
+    grid-column: 1/4;
     margin-bottom: 10px;
 }
 h3 {
@@ -29,28 +29,20 @@ h3 {
     color: #AEAEAE;
     width: 30%;
 }
+.pointer {
+    cursor: pointer;
+}
 .card .info {
     display: flex;
 }
 .card .info span {
     color: white;
 }
-.card .button {
-    grid-column: 3;
-    grid-row: 1/4;
-    height: 100%;
-    vertical-align: middle;
-    text-align: right;
-    padding: 10%;
+hr {
+    grid-column: 1/4;
+    
+    width: 100%;
 }
-.card .button a {
-    padding: 8px;
-    background-color: #D5C871;
-    color: #373737;
-    font-family: Roboto;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 10px;
-    box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.25);
+app-starship {
+    width: 100%;
 }

@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class BackendIntegratorService {
 
+  static readonly BASE_URI = 'https://swapi.co/api';
+
   constructor() { }
 
   get(url: string, params?: any): Promise<any> {
@@ -12,9 +14,13 @@ export class BackendIntegratorService {
     if (!params) {
       params = {};
     }
-    return fetch(url, {
-      method: 'GET',
-      body: params
+    url += '?';
+    console.log('PARAMS =>>> ', params);
+    for(const prop in params) {
+      url += prop + '=' + params[prop] + '&';
+    }
+    return fetch(BackendIntegratorService.BASE_URI + url, {
+      method: 'GET'
     });
   }
 }

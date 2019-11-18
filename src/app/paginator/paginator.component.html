@@ -1,0 +1,4 @@
+<nav>
+    <a (click)="prev()" [class]="(service.currentPage <= 1) ? 'disabled' : ''" href="javascript: void(0);">&lt;</a>
+    <a (click)="next()" [class]="(!service.canGoNext) ? 'disabled' : ''" href="javascript: void(0);">&gt;</a>
+</nav>
