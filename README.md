@@ -12,4 +12,4 @@ Run `ng build` or `npm start` or even `yarn start` to build the project. The bui
 
 ## Live Example
 
-It's possible to run a live example by accessing the following link: https://swapi.frontend.s3.amazonaws.com/
+It's possible to run a live example by accessing the following link: https://swapi.frontend.s3.amazonaws.com/index.html
