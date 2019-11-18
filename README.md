@@ -9,3 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Build
 
 Run `ng build` or `npm start` or even `yarn start` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Live Example
+
+It's possible to run a live example by accessing the following link: https://swapi.frontend.s3.amazonaws.com/
